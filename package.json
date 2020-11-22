@@ -1,0 +1,23 @@
+{
+  "name": "39-ROOMCHAT-SOCKETIO",
+  "version": "1.0.0",
+  "description": "Aplicacion Completa de Room Chat Messages, code for live location too (PARA PRACTICA)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "engines": {
+    "node": "14.6.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
