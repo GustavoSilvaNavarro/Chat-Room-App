@@ -4,7 +4,7 @@ const { generateMessage, generateLocationMessage } = require('./message'); //CAL
 
 //DESCRIBING BLOCK TESTS
 //First describing block tests
-describe('generate-message', () => {
+describe('Generate-message', () => {
     //Single Test inside the block
     it("Should generate correct message object", () => {
         let from = 'Gustavo';

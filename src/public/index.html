@@ -3,69 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--ADD SOCKET.IO CDN FOR CLIENT-->
-    <script defer src="/socket.io/socket.io.js"></script>
-    <!--ADD OWN SCRIPT-->
-    <script defer src="js/dom-frontend.js"></script>
-    <!--ADD MOMENT SCRIPT FORM NODE MODULES AND I COPY TO THE JS FOLDER-->
-    <script defer src="js/libs/moment.js"></script>
-    <!--ADD MUSTACHE SCRIPT FORM NODE MODULES AND I COPY TO THE JS FOLDER TO HAVE ACCESS AND USE IT-->
-    <script defer src="js/libs/mustache.js"></script>
-    <!--ADD OWN CSS STYLING-->
+    <!--ADD OWN CSS-->
     <link rel="stylesheet" href="css/main.css">
-    <title>Room Chat App</title>
+    <!--ADD GOOGLE FONTS CDN-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <title>Welcome Chat App</title>
 </head>
-<body class="chat">
-    <div class="main">
-        <div class="chat__sidebar">
-            <h3>People</h3>
-            <div id="users">
-
+<body class="color">
+    <div class="centered-form">
+        <form action="/chat-app.html">
+            <div class="form-field">
+                <h3 class="title">Join Chat</h3>
             </div>
-        </div>
-
-        <div class="chat__main">
-            <div class="message-window">
-                <ol id="messages" class="chat__messages">
-
-                </ol>
+            <div class="form-field">
+                <label>Display Room</label>
+                <input type="text" name="name" autofocus>
             </div>
-
-            <div class="chat__footer">
-                <form id="message-form">
-                    <input class="input" type="text" name="message" placeholder="Typing message..." autofocus autocomplete="off">
-                    <button type="submit" id="btn">Send</button>
-                </form>
-            
-                <!--GEOLOCATION API HTML-->
-                <button type="button" id="send-location">Send Location</button>    
-            </div>    
-        </div>
+            <div class="form-field">
+                <label>Room Name</label>
+                <input type="text" name="room">
+            </div>
+            <div class="form-field">
+                <button>Join</button>
+            </div>
+        </form>    
     </div>
-    <!--ADD SCRIPT TEMPLATE-->
-    <script id="message-template" type="text/template">
-        <li class="message">
-            <div class="message-title">
-                <h4>{{ from }}</h4>
-                <span>{{ createdAt }}</span>
-            </div>
-            <div class="message-body">
-                <p>{{ text }}</p>
-            </div>
-        </li>
-    </script>
-
-    <!--ADD SCRIPT TEMPLATE FOR LOCTION DATA-->
-    <script id="location-message-template" type="text/template">
-        <li class="message">
-            <div class="message-title">
-                <h4>{{ from }}</h4>
-                <span>{{ createdAt }}</span>
-            </div>
-            <div class="message-body">
-                <a target="_blank" href="{{ url }}">My Current Location</a>
-            </div>
-        </li>
-    </script>
 </body>
 </html>
